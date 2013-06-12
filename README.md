@@ -1,4 +1,4 @@
-# grunt-git-committers
+# grunt-git-committers [![NPM version](https://badge.fury.io/js/grunt-git-committers.png)](http://badge.fury.io/js/grunt-git-committers)
 
 > Get the committers from a git repository with some sorting and formatting options.
 
