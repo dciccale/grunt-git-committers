@@ -1,6 +1,6 @@
 # grunt-git-committers [![Build Status](https://travis-ci.org/dciccale/grunt-git-committers.png?branch=master)](https://travis-ci.org/dciccale/grunt-git-committers) [![NPM version](https://badge.fury.io/js/grunt-git-committers.png)](http://badge.fury.io/js/grunt-git-committers)
 
-> Get the committers from a git repository with some sorting and formatting options.
+> Get the committers from a git repository with some sorting and formatting options
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
