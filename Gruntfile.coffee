@@ -4,18 +4,18 @@
 # Licensed under the MIT license.
 # https://github.com/dciccale/grunt-git-committers/blob/master/LICENSE-MIT
 
-"use strict"
+'use strict'
 
 module.exports = ->
 
   @initConfig
     jshint:
-      all: ["tasks/*.js", "<%= nodeunit.tests %>"]
+      all: ['tasks/*.js', '<%= nodeunit.tests %>']
       options:
-        jshintrc: ".jshintrc"
+        jshintrc: '.jshintrc'
 
     nodeunit:
-      tests: ["test/*_test.js"]
+      tests: ['test/*_test.js']
 
   @loadTasks 'tasks'
 
