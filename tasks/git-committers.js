@@ -23,25 +23,30 @@ module.exports = function (grunt) {
 
     var done = this.async();
 
-    // trim output
-    var _trim = function (stdout) {
-      return stdout.split('\n').map(function (l) {
-        // trim and replace tabs for spaces
-        return _.trim(l.replace(/\t+/, ' '));
+    var _format = function (stdout) {
+      var maxcol = 0;
+      var pad = ' ';
+      return stdout.replace(/^\s+|\s+$/g, '').split('\n').map(function (l) {
+        var numl = l.match(/\d+/);
+        if (numl) {
+          numl = numl[0].length;
+          maxcol = numl > maxcol ? numl : maxcol;
+          pad = '  ' + new Array(maxcol-numl+1).join(' ');
+        }
+        return _.trim(l.replace(/\t+/, pad));
       });
     };
 
     // sort types
-    var sorts = {
-      commits: '',
+    var sortMethod = {
       alphabetical: 'sort',
       chronological: 'reverse'
     };
 
     // sort output
     var _sort = function (stdout) {
-      if (sorts[options.sort]) {
-        stdout = _.unique(stdout[sorts[options.sort]]());
+      if (sortMethod[options.sort]) {
+        stdout = _.unique(stdout[sortMethod[options.sort]]());
       }
       return stdout;
     };
@@ -78,9 +83,9 @@ module.exports = function (grunt) {
 
     exec(cmd, function (error, stdout, stderr) {
       if (!error) {
-        stdout = _trim(stdout);
-        stdout = _sort(stdout).join('\n').replace(/^\s+|\s+$/g, '');
-        grunt.file.write(options.output, stdout);
+        stdout = _format(stdout);
+        stdout = _sort(stdout);
+        grunt.file.write(options.output, stdout.join('\n'));
         grunt.log.writeln('File "' + options.output + '" created.');
         done();
       } else {
