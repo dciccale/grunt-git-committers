@@ -1,4 +1,4 @@
-# grunt-processhtml
+# grunt-git-committers
 # https://github.com/dciccale/grunt-git-committers
 # Copyright (c) 2013 Denis Ciccale (@tdecs)
 # Licensed under the MIT license.
