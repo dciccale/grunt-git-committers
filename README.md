@@ -50,7 +50,7 @@ The output file where to save the list of committers.
 ### Usage Examples
 
 #### Default Options
-If using the default options you don't need to specify anything at your gruntfile, just call the `committers` task.
+If using the default options you don't need to specify anything at your gruntfile, just call `grunt committers` task.
 
 #### Custom Options
 This will save a file `CONTRIBUTIONS.md` with the list of committers and their emails, ordered by number of commits
