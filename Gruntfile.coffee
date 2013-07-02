@@ -10,18 +10,16 @@ module.exports = ->
 
   @initConfig
     jshint:
-      all: ['tasks/*.js', '<%= nodeunit.tests %>']
       options:
         jshintrc: '.jshintrc'
+      all: ['tasks/*.js', '<%= nodeunit.tests %>']
 
     nodeunit:
       tests: ['test/*_test.js']
 
   @loadTasks 'tasks'
-
   @loadNpmTasks 'grunt-contrib-jshint'
   @loadNpmTasks 'grunt-contrib-nodeunit'
 
   @registerTask 'test', ['committers', 'nodeunit']
-
   @registerTask 'default', ['jshint', 'test']
