@@ -74,7 +74,7 @@ module.exports = function (grunt) {
         cmd += 'e';
       }
 
-      // ommit merge commits
+      // omit merge commits
       if (options.nomerges) {
         cmd += ' --no-merges';
       }
