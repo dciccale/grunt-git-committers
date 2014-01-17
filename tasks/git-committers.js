@@ -5,6 +5,8 @@
  * Copyright (c) 2013 Denis Ciccale (@tdecs)
  * Licensed under the MIT license.
  * https://github.com/dciccale/grunt-git-committers/blob/master/LICENSE-MIT
+ *
+ *
  */
 
 'use strict';
@@ -13,6 +15,7 @@ module.exports = function (grunt) {
 
   var _ = grunt.util._;
   var exec = require('child_process').exec;
+  var os = require('os');
 
   grunt.registerTask('committers', 'Get the committers from a git repository with some sorting and formatting options', function () {
     var options = this.options({
@@ -79,7 +82,17 @@ module.exports = function (grunt) {
         cmd += ' --no-merges';
       }
 
-      cmd += ' < /dev/tty';
+
+      //detect current system use the appropriate terminal
+      if((/Windows_NT/g).test(os.type())){
+          cmd += ' < CON';
+      } else {
+          cmd += ' < /dev/tty';
+      }
+
+
+
+
     }
 
     exec(cmd, function (error, stdout, stderr) {
