@@ -82,18 +82,19 @@ module.exports = function (grunt) {
 
 
             //detect current system use the appropriate terminal
-            if ((/Windows_NT/g).test(os.type())) {
+            if (/win/.test(process.platform)) {
                 cmd += ' < CON';
             } else {
                 cmd += ' < /dev/tty';
             }
         }
 
+
         exec(cmd, function (error, stdout, stderr) {
             if (!error) {
                 stdout = _format(stdout);
                 stdout = _sort(stdout);
-                grunt.file.write(options.output, stdout.join('\n'));
+                grunt.file.write(options.output, stdout.join(os.EOL));
                 grunt.log.writeln('File "' + options.output + '" created.');
                 done();
             } else {
