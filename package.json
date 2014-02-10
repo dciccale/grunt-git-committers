@@ -1,7 +1,7 @@
 {
   "name": "grunt-git-committers",
   "description": "Get the committers from a git project in many different formats",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/dciccale/grunt-git-committers",
   "author": {
     "name": "Denis Ciccale",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "grunt-contrib-jshint": "0.6.x",
     "grunt-contrib-nodeunit": "0.2.x",
-    "grunt": "0.4.x"
+    "grunt": "~0.4.2"
   },
   "peerDependencies": {
     "grunt": "0.4.x"
