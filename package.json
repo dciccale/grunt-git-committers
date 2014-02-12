@@ -1,7 +1,7 @@
 {
   "name": "grunt-git-committers",
-  "description": "Get the committers from a git project in many different formats",
-  "version": "0.1.1",
+  "description": "Get the committers from a git repository with some sorting and formatting options",
+  "version": "0.1.2",
   "homepage": "https://github.com/dciccale/grunt-git-committers",
   "author": {
     "name": "Denis Ciccale",
@@ -29,9 +29,9 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "0.6.x",
-    "grunt-contrib-nodeunit": "0.2.x",
-    "grunt": "~0.4.2"
+    "grunt-contrib-jshint": "0.8.0",
+    "grunt-contrib-nodeunit": "0.3.0",
+    "grunt": "0.4.2"
   },
   "peerDependencies": {
     "grunt": "0.4.x"
