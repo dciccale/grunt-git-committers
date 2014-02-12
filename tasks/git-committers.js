@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 
 
             //detect current system use the appropriate terminal
-            if (/win/.test(process.platform)) {
+            if (/win32/.test(process.platform)) {
                 cmd += ' < CON';
             } else {
                 cmd += ' < /dev/tty';
