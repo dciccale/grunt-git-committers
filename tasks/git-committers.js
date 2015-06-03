@@ -2,7 +2,7 @@
  * grunt-git-committers
  * https://github.com/dciccale/grunt-git-committers
  *
- * Copyright (c) 2013-2014 Denis Ciccale (@tdecs)
+ * Copyright (c) 2013-2015 Denis Ciccale (@tdecs)
  * Licensed under the MIT license.
  * https://github.com/dciccale/grunt-git-committers/blob/master/LICENSE-MIT
  */
@@ -11,9 +11,6 @@
 
 module.exports = function (grunt) {
 
-  var _ = grunt.util._;
-  var exec = require('child_process').exec;
-  var os = require('os');
   var gitCommitters = require('git-committers');
 
   grunt.registerTask('committers', 'Get the committers from a git repository with some sorting and formatting options', function () {
