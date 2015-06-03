@@ -1,7 +1,7 @@
 {
   "name": "grunt-git-committers",
   "description": "Get the committers from a git repository with some sorting and formatting options",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/dciccale/grunt-git-committers",
   "author": {
     "name": "Denis Ciccale",
@@ -42,5 +42,8 @@
     "authors",
     "contributors",
     "gruntplugin"
-  ]
+  ],
+  "dependencies": {
+    "git-committers": "^1.0.0"
+  }
 }
