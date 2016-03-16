@@ -3,3 +3,4 @@ lucian.enache
 Lucian Enache
 Robert Rossmann
 dciccale
+gruntjs-updater
