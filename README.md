@@ -41,7 +41,7 @@ Default value: `false`
 
 Set to `true` to exclude merge commits. It only works when sorting by `commits`.
 
-#### options.ouput
+#### options.output
 Type: `String`
 Default value: `./AUTHORS.txt`
 
